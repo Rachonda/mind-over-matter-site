@@ -26,7 +26,3 @@ jobs:
             **/.git*
             **/.github*
             README.md
-
-
-git commit -m "Deploy"
-git push origin main
