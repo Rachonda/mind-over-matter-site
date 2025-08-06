@@ -17,10 +17,10 @@ jobs:
       - name: 📂 Upload files via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.iad1-shared-b7-48.dreamhost.com }}
-          username: ${{ secrets.dh_nysw69 }}
-          password: ${{ secrets.Jackie@1952 }}
-          server-dir: ${{ secrets./home/dh_nysw69/mindovermatterresilience.org }}/
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_REMOTE_PATH }}/
           local-dir: ./
           exclude: |
             **/.git*
