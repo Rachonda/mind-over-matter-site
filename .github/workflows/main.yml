@@ -1,1 +1,29 @@
 .github/workflows/deploy.yml
+name: 🚀 Deploy to DreamHost via FTP
+
+on:
+  push:
+    branches:
+      - main  # or 'master' if that's your default branch
+
+jobs:
+  ftp-deploy:
+    name: Upload Website to DreamHost
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: 📂 Upload files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_REMOTE_PATH }}/
+          local-dir: ./
+          exclude: |
+            **/.git*
+            **/.github*
+            README.md
