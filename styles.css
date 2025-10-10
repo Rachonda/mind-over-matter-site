@@ -82,7 +82,7 @@ body, .content {
 }
 
 .hero-section {
-  background-image: url('images/hero.png') center/cover no-repeat;
+  background-image: url('images/hero.png');
   background-size: cover;
   background-position: top;
   height: 100vh;
