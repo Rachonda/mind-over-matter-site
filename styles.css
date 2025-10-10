@@ -14,6 +14,11 @@ body {
   background-color: #fefaf6;
 }
 
+body, .content {
+  padding: 1rem;
+  box-sizing: border-box;
+  }
+
 .navbar {
   background-color: #cbbba0;
   padding: 1rem 2rem;
@@ -28,10 +33,12 @@ body {
 
 .nav-menu {
   list-style: none;
+  justify-content; center;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .nav-menu li {
@@ -131,8 +138,10 @@ body {
 
 .services div {
   background: #f4f4f0;
-  padding: 1rem;
-  border-radius: 8px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  flex: 11 120px;
+  text-align: center;
   font-weight: bold;
 }
 
@@ -185,7 +194,7 @@ blockquote {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
