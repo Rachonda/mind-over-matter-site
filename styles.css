@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}  
+
 body {
   font-family: 'Georgia', serif;
   font-size: 18px;
@@ -76,7 +82,7 @@ body, .content {
 }
 
 .hero-section {
-  background-image: url('images/hero.png');
+  background-image: url('images/hero.png') center/cover no-repeat;
   background-size: cover;
   background-position: top;
   height: 100vh;
